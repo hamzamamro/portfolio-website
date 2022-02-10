@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* Global Rules */
+*
+{
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+/* Global Rules */
+
+/* Start Header */
+header
+{
+    background-color: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    position: fixed;
+    z-index: 9999;
+}
+
+.logo
+{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+.nav a:hover
+{
+    color: #BF29EC;
+}
+
+#nav-btn{
+    color: white;
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    header{
+        padding: 10px 150px;
+    }
+
+    .logo{
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 767px){
+    header{
+        padding: 10px 150px;
+    }
+
+    .logo{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 766px){
+    header{
+        padding: 10px 20px;
+    }
+
+    .nav ul{
+        display: none;
+    }
+
+    #nav-btn{
+        display: block;
+    }
+
+    .nav ul.active{
+        display: block;
+        background-color: #BF29EC;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 5%;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .nav ul li{
+        padding: 35px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .nav ul li:hover{
+        background-color: #000;
+    }
+}
+/* End Header */
+
+/* Global Classes */
+section
+{
+    padding: 200px 100px;
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+    color: #aa22d3;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card
+{
+    background-color: #111111;
+    width: 340px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.7s;
+    margin-top: 10px;
+}
+
+.card:hover
+{
+    transform: scale(1.1);
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    section{
+        padding: 70px 100px;
+    }
+}
+
+@media (max-width: 766px){
+    section{
+        padding: 50px 100px;
+    }
+}
+
+@media (max-width: 480px){
+    section{
+        padding: 50px 50px;
+    }
+}
+
+@media (max-width: 285px){
+    section{
+        padding: 50px 30px;
+    }
+}
+
+/* Global Classes */
+
+/* Start Main Section */
+.main
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #111111;
+}
+
+.main h2
+{
+    color: #BF29EC;
+    font-size: 22.4px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.main h2 span
+{
+    font-size: 35px;
+    color:#fff;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 20px;
+    line-height: 40px;
+}
+
+.main h3
+{
+    color: #BF29EC;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.main-btn
+{
+    background-color: #BF29EC;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover
+{
+    background-color: #991ebe;
+    transform: scale(1.1);
+}
+
+
+.social-links a
+{
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+
+.social-links a:hover
+{
+    color: #aa22d3;
+}
+
+.main-img
+{
+    position: absolute;
+    top: 27%;
+    left: 60%;
+    width: 300px;
+    height: 300px;
+}
+
+
+.card .icon
+{
+    color: #aa22d3;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card .info
+{
+    text-align: center;
+}
+
+.card .info h3
+{
+    color: #aa22d3;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card .info p
+{
+    color: white;
+}
+
+@media (min-width: 1200px){
+    .main-img{
+        top: 33%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .main-img{
+        top: 33%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .main-img{
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    .main-img{
+        display: none;
+    }
+}
+
+@media (max-width: 766px){
+    .main h2{
+        font-size: 17px;
+    }
+
+    .main h2 span{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    .main h2{
+        font-size: 20px;
+    }
+
+    .main h2 span{
+        font-size: 25px;
+    }
+
+    .main h3{
+        font-size: 16px;
+    }
+}
+
+/* End Main Section */
+
+/* Start Services Section */
+@media (max-width: 280px){
+    #services .card{
+        margin-left: 0px;
+    }
+}
+/* End Services Section */
+
+/* Start Skills Section */
+.skills
+{
+    background-color: #111111;
+}
+
+.skills h2:first-child
+{
+    display: flex;
+    justify-content: center;
+    color: #aa22d3;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.skills .header-tools
+{
+    display: flex;
+    justify-content: center;
+    color: #aa22d3;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.skills .front-end
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills .skill-card
+{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 7px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.skills .skill-card i
+{
+    color: #aa22d3;
+    margin-top: 10px;
+    font-size: 2.2em;
+}
+
+.skills .skill-card p
+{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.skills .skill-card .jquery-icon
+{
+    width: 35.2px;
+    height: 35.2px;
+    padding-top: 10px;
+}
+
+.skills .skill-card .jquery-pra
+{
+    margin-top: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .skills .skill-card{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 767px){
+    .skills .skill-card{
+        margin-top: 15px;
+    }
+}
+/* End Skills Section */
+
+/* Start Projects Section */
+.projects .content
+{
+    margin-top: 30px;
+}
+
+.project-card
+{
+    background-color: #111111;
+    min-height: 260px;
+    max-width: 380px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 4px solid #111111;
+    transition: 0.7s ease;
+    margin-left: 20px;
+}
+
+.project-card:hover
+{
+    transform: scale(1.1);
+}
+
+.project-card .project-img img
+{
+    width: 100%;
+}
+
+.project-card:hover .project-img img
+{
+    opacity: 0.8;
+}
+
+.project-card .project-info
+{
+    padding: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.project-card .project-info .project-pra
+{
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.project-card .project-info .project-title
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-info .project-title span
+{
+    color: #aa22d3;
+}
+
+.project-info .project-title a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.project-info .project-title a:hover 
+{
+    color: #aa22d3;
+} 
+
+@media (min-width: 768px) and (max-width: 991px){
+    .project-card{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px){
+    .project-card{
+        margin-top: 20px;
+    }
+}
+/* End Projects Section */
+
+/* Start Contact Section */
+.contact
+{
+    background-color: #111111;
+}
+
+.contact .card
+{
+    background-color: white;
+}
+
+.contact .card p
+{
+    color: black;
+    font-weight: 600;
+}
+
+@media (max-width: 480px){
+    .contact .title{
+        font-size: 1.5em;
+    }
+}
+
+/* End Contact Section */
+
+/*Start Footer Section */
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.footer .footer-title span
+{
+    color: #aa22d3;
+}
+
+.footer .social-links i
+{
+    color: #000;
+}
+
+.footer .social-links i:hover
+{
+    color: #aa22d3;
+}
+
+@media (max-width: 480px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-title{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 285px){
+    .footer-title{
+        font-size: 15px;
+    }
+}
+/*End Footer Section */
