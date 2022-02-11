@@ -114,9 +114,21 @@ header
 
 @media (max-width: 480px){
     header{
-        padding: 40px 20px;
+        padding: 30px 20px;
     }
 
+    .nav ul.active{
+        top: 10%;
+    }
+}
+
+@media (min-width: 412px) and (max-width: 479px){
+    .nav ul.active{
+        top: 8%;
+    }
+}
+
+@media (max-width: 360px){
     .nav ul.active{
         top: 10%;
     }
@@ -535,8 +547,8 @@ section
 
 @media (max-width: 480px){
     .project-card{
-        height: 210px;
-        width: 450px;
+        min-height: 210px;
+        max-width: 450px;
         margin-left: 0;
     }
 
@@ -574,6 +586,7 @@ section
 @media (max-width: 480px){
     .contact .title{
         font-size: 1.5em;
+        margin-left: 6px;
     }
 }
 
