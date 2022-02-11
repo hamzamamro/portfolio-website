@@ -3,7 +3,22 @@ var navUl = $('.nav ul');
 var navUlLi = $('.nav ul li');
 
 navBtn.on('click', function(){
+    
     navUl.toggleClass('active');
+
+    if(navUl.hasClass('active')){
+        $('html, body').css({
+            overflow: 'hidden',
+            height: '100%'
+        });
+
+
+    } else{
+        $('html, body').css({
+            overflow: 'auto',
+            height: 'auto'
+        });
+    }
 });
 
 navUlLi.on('click', function(){
@@ -11,7 +26,12 @@ navUlLi.on('click', function(){
         navUl.css({
             visibility: 'hidden'
         });
-        
+
+        $('html, body').css({
+            overflow: 'auto',
+            height: 'auto'
+        });
+
         navUl.removeClass('active');
 
         navUl.css({
@@ -19,4 +39,3 @@ navUlLi.on('click', function(){
         });
     } 
 });
-
